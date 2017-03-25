@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandoFacto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P3S-on-m8I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RandoFacto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFY-xU-AOM">
+                                <rect key="frame" x="16" y="20" width="343" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="Jhx-gG-lar"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="56"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-5d-sFg">
+                                <rect key="frame" x="60" y="480" width="255" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z5Q-5d-sFg" secondAttribute="height" multiplier="255:167" id="iUb-YH-cXn"/>
+                                </constraints>
+                                <state key="normal" image="Brain.png"/>
+                                <connections>
+                                    <action selector="RandomFact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJe-vJ-JDV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3g-rp-bC3">
+                                <rect key="frame" x="16" y="108" width="343" height="349"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="V3g-rp-bC3" secondAttribute="height" multiplier="343:349" id="aTp-u5-MIx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V3g-rp-bC3" firstAttribute="top" secondItem="xFY-xU-AOM" secondAttribute="bottom" constant="15" id="3UU-WO-0tw"/>
+                            <constraint firstAttribute="trailing" secondItem="P3S-on-m8I" secondAttribute="trailing" id="AYa-Xb-trH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z5Q-5d-sFg" secondAttribute="bottom" constant="20" id="L9i-HP-WQN"/>
+                            <constraint firstItem="Z5Q-5d-sFg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="LX7-UZ-wut"/>
+                            <constraint firstItem="xFY-xU-AOM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NNe-sj-9jC"/>
+                            <constraint firstItem="P3S-on-m8I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OFl-q9-49r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z5Q-5d-sFg" secondAttribute="trailing" constant="44" id="Oep-zj-IGr"/>
+                            <constraint firstItem="Z5Q-5d-sFg" firstAttribute="top" secondItem="V3g-rp-bC3" secondAttribute="bottom" constant="23" id="REQ-aB-mE1"/>
+                            <constraint firstItem="xFY-xU-AOM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SA0-va-nh3"/>
+                            <constraint firstItem="Z5Q-5d-sFg" firstAttribute="top" secondItem="V3g-rp-bC3" secondAttribute="bottom" constant="23" id="ZKc-cr-P6y"/>
+                            <constraint firstItem="xFY-xU-AOM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="e8t-jc-ig7"/>
+                            <constraint firstItem="P3S-on-m8I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fGs-Od-adN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P3S-on-m8I" secondAttribute="bottom" id="itF-EH-xAI"/>
+                            <constraint firstItem="Z5Q-5d-sFg" firstAttribute="top" secondItem="V3g-rp-bC3" secondAttribute="bottom" constant="23" id="ld0-Z7-5Pt"/>
+                            <constraint firstItem="V3g-rp-bC3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lpp-Vj-aW6"/>
+                            <constraint firstItem="V3g-rp-bC3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qpX-nG-Lzh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="V3g-rp-bC3" id="8dU-0j-jFO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="100" y="110.19490254872565"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Brain.png" width="460" height="340"/>
+        <image name="background.jpg" width="1920" height="1080"/>
+    </resources>
 </document>
